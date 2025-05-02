@@ -28,7 +28,7 @@ function Cards(props) {
   }
 
   return (
-    <div className="w-[80%] flex flex-wrap justify-center gap-4 mb-4 ml-[12rem]">
+    <div className="w-[80%] flex flex-wrap justify-center gap-4 mb-4 mx-auto">
       {getCourse().map((course) => {
         return <Card key={course.id} course={course} />;
       })}

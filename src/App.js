@@ -38,7 +38,7 @@ const App = () => {
 
   
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-tr from-sky-500 to-blue-900 via-green-600">
 
       
       <Navbar />

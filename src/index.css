@@ -2,11 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  min-height: 100vh; /* Ensure the gradient covers the full viewport height */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animation for filter buttons */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-size-200 {
+  background-size: 200% 200%;
+  animation: gradientShift 4s linear infinite;
+}
+
+.animate-gradient {
+  animation: gradientShift 4s linear infinite;
+}
+
+:root {
+  --primary-color: #FFFFFF; /* White for text */
+  --secondary-color: #1a202c; /* Dark gray for accents/secondary text */
+  --accent-color: #23a6d5; /* A color from the animated background */
+  --background-light: rgba(255, 255, 255, 0.1); /* Light, semi-transparent background for elements */
+  --background-dark: rgba(0, 0, 0, 0.1); /* Dark, semi-transparent background for elements */
+  --border-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white border */
+}
+
 .spinner {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: conic-gradient(#0000 10%, #22223b);
+    background: conic-gradient(#0000 10%, var(--secondary-color)); /* Using a CSS variable */
     -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
     animation: spinner-zp9dbg 1s infinite linear;
 }

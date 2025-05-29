@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./component/Navbar";
-import Filter from "./component/Filter";
 import Cards from "./component/Cards";
-import {apiUrl,filterData } from "./data.js";
+import Filter from "./component/Filter";
+import Navbar from "./component/Navbar";
 import Spinner from './component/Spinner';
-import { AnimatedBackground } from "animated-backgrounds";
+import { apiUrl, filterData } from "./data.js";
 
 const App = () => {
   const [courses, setCourses] = useState([]);
@@ -38,7 +37,7 @@ const App = () => {
 
   
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-tr from-sky-500 to-blue-900 via-green-600">
+    <div className="min-h-screen flex flex-col">
 
       
       <Navbar />
